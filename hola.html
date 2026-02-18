@@ -373,6 +373,74 @@
             filter: brightness(1.1);
         }
 
+        /* --- CTA Section --- */
+        .cta-club {
+            padding: 6rem 2rem;
+            background: linear-gradient(135deg, var(--accent) 0%, #5E35B1 100%);
+            color: var(--white);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-club::before {
+            content: '\f1b0';
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            position: absolute;
+            font-size: 20rem;
+            opacity: 0.05;
+            bottom: -50px;
+            right: -50px;
+            transform: rotate(-15deg);
+        }
+
+        .cta-container {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .cta-club h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .cta-club p {
+            margin-bottom: 2.5rem;
+            opacity: 0.9;
+            font-size: 1.1rem;
+        }
+
+        .cta-form-inline {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr) auto;
+            gap: 1rem;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 1rem;
+            border-radius: 20px;
+            backdrop-filter: blur(5px);
+        }
+
+        .cta-form-inline input {
+            background: var(--white);
+            color: var(--text-dark);
+            padding: 1rem;
+        }
+
+        .cta-form-inline .btn-submit {
+            padding: 0 2rem;
+            background: var(--secondary);
+            border-radius: 12px;
+        }
+
+        @media (max-width: 768px) {
+            .cta-form-inline {
+                grid-template-columns: 1fr;
+            }
+        }
+
         /* --- Responsive --- */
         @media (max-width: 968px) {
             .hero-container {
@@ -483,6 +551,20 @@
                     <h3>Urgencias 24/7</h3>
                     <p>Estamos aquí en los momentos más difíciles, cuando más nos necesitan.</p>
                 </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta-club fade-in">
+            <div class="cta-container">
+                <h2>¡Únete al Club de Huellas! 🐾</h2>
+                <p>Recibe consejos de salud, promociones exclusivas y sorpresas para el cumple de tu perrito.</p>
+                <form class="cta-form-inline">
+                    <input type="text" placeholder="Tu Nombre" required>
+                    <input type="number" placeholder="Edad" min="0" required>
+                    <input type="email" placeholder="Tu Email" required>
+                    <button type="submit" class="btn-submit">¡Suscribirme!</button>
+                </form>
             </div>
         </section>
 
